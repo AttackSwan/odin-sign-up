@@ -1,17 +1,26 @@
 /* https://unsplash.com/photos/0D8_tYHIy0o */
 /* https://freesvg.org/dragon-vector-silhouette */
 
+:root{
+    --orange: #ffab00;
+    --light-grey: #eeecec;
+    --dark-grey: #838383;
+}
+
 .container {
     display: flex;
 }
 
 .hero-image,
 .right {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     background: black;
 }
 
 .hero-image {
+    justify-content: end;
     width: 40vw;
     position: relative;
     
@@ -48,16 +57,14 @@
 }
 
 .hero-footer {
-    color: white;
-    position: relative;
-    top: 90%;
-
+    width: 100%;
+    text-align: center;
+    color: var(--light-grey);
+    margin-bottom: 8px;
 }
 
 /* RHS */
 .right {
-    display: flex;
-    flex-direction: column;
     width: 60vw;
     height: 100vh;
 }
@@ -80,22 +87,22 @@
 }
 
 .header-text {
-    width: 80%;
+    width: 60%;
     font-size: 1.3rem;
     font-weight: 500;
-    color: #b9b9b9;
+    color: var(--light-grey);
 }
 
 .form-controls > p {
     margin: 16px 32px;
-    color: lightgray;
+    color: var(--light-grey);
     font-size: 1.5rem;
 }
 
 .form-controls {
     z-index:2;
     height: 30vh;
-    color: #b9b9b9;
+    color: var(--dark-grey);
     background-color: #060606;
     box-shadow: rgba(50, 50, 93, 0.5) 10px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -103,7 +110,7 @@
 .form-footer {
     height: 30vh;
     padding: 40px 50px;
-    color: #b9b9b9;
+    color: var(--light-grey);
     font-size: 1rem;
     font-weight: 400;
 }
@@ -117,7 +124,7 @@ input
     box-sizing: border-box; 
     border-radius: 4px;
     font-size: .8rem;
-    width: 100%;
+    width: 400px;
 }
 
 label {
@@ -126,32 +133,39 @@ label {
 }
 
 input {
-    color: #888888;
+    padding: 4px;
+    color: var(--dark-grey);
     background-color: black;
     outline: none;
-    border: 1px solid #888888;
+    border: 1px solid var(--dark-grey);
 }
 
 input:focus {
-    border: 1px solid #ffab00;
-    box-shadow: 0 0 16px 0 #ffab00;
+    border: 1px solid var(--orange);
+    box-shadow: 0 0 16px 0 var(--orange);
 }
-
 
 form > div {
     display: flex;
-    justify-content: space-around;
-    gap: 32px;
-    padding: 16px;
+    justify-content: left;
+    padding: 8px;
+}
+
+form > div > div {
+    margin-left: 32px;
 }
 
 .orange-text {
-    color: #ffab00;
+    color: var(--orange);
     font-weight: 600;
 }
 
+.grey-link {
+    color: var(--light-grey);
+}
+
 button {
-    border: #ffab00 2px solid;
+    border: var(--orange) 2px solid;
     background-color: black;
     border-radius: 8px;
     
@@ -161,5 +175,8 @@ button {
     padding: 12px 48px;
 }
 
-a {
+.orange-link {
+    font-weight: 600;
+    color: var(--orange);
+    text-decoration: none;
 }
