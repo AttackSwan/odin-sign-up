@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="hero-image">
             <div class="banner">
                 <img class="logo" src="img/D20.png" alt="20 sided die">
@@ -21,16 +22,47 @@
             </div>
             <div class="hero-footer">Image by A B on Unsplash</div>
         </div>
+       
         <div class="right">
             <div class="form-header">
                 <div class="header-text">Welcome to the campaign tracker for Ebberon: Sunlight and Shadows!</div>
                 <div class="header-text">Please log in to access information on locations, items, weapons, NPCs, antagonists, and important plot threads.</div>
             </div>
+            
             <div class="form-contols">
                 <p>Let's do this!</p>
                 <div class="inputs">
                     <form action="" method="post">
-
+                        <div>
+                            <div>
+                                <label for="name">FIRST NAME</label>
+                                <input type="text" id="name" name="user-firstname" required>
+                            </div>
+                            <div>
+                                <label for="surname">LAST NAME</label>
+                                <input type="text" id="surname" name="user-surname" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="user-email" required>
+                            </div>
+                            <div>
+                                <label for="phone">PHONE NUMBER</label>
+                                <input type="text" id="surname" name="user-surname">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="user-password">
+                            </div>
+                            <div>
+                                <label for="confirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm" name="user-confirm">
+                            </div>
+                        </div>
                     </form>
 
                 </div>
