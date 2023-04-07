@@ -7,7 +7,6 @@
 
 .hero-image,
 .right {
-    display: flex;
     height: 100vh;
     background: black;
 }
@@ -48,6 +47,14 @@
 
 }
 
+.hero-footer {
+    color: white;
+    position: relative;
+    top: 90%;
+
+}
+
+/* RHS */
 .right {
     display: flex;
     flex-direction: column;
@@ -56,10 +63,8 @@
 }
 
 .form-header,
-.header-text,
 .form-controls,
 .form-footer {
-    position:relative;
     width: 100%;
     box-sizing: border-box;
     background-color: black;
@@ -80,13 +85,17 @@
     font-weight: 500;
     color: #b9b9b9;
 }
-
 .form-contols {
     z-index:2;
     height: 30vh;
     color: #b9b9b9;
     background-color: #060606;
     box-shadow: rgba(50, 50, 93, 0.5) 10px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.form-controls > p {
+    color: green;
+    font-size: 10rem;
 }
 
 .form-footer {
@@ -101,27 +110,31 @@
 /* FORM STYLING */
 
 label,
-input,
-textarea
+input
 {
     display: block;
     appearance: none;
     box-sizing: border-box; 
     border-radius: 4px;
-    font-size: 100%;
+    font-size: .8rem;
     width: 100%;
-    
-    color: white;
-    background-color: black;
-}
-
-input:focus {
-    border: 2px solid #ffab00;
-    box-shadow: 0 0 16px 0 #ffab00;
 }
 
 label {
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    background-color: #060606;
+}
+
+input {
+    color: #888888;
+    background-color: black;
+    outline: none;
+    border: 1px solid #888888;
+}
+
+input:focus {
+    border: 1px solid #ffab00;
+    box-shadow: 0 0 16px 0 #ffab00;
 }
 
 
@@ -138,7 +151,7 @@ form > div {
 }
 
 button {
-    border: ffab00 2px solid;
+    border: #ffab00 2px solid;
     background-color: black;
     border-radius: 8px;
     
