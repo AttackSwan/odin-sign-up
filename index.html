@@ -25,22 +25,22 @@
        
         <div class="right">
             <div class="form-header">
-                <div class="header-text">Welcome to the campaign tracker for Ebberon: Sunlight and Shadows!</div>
+                <div class="header-text">Welcome to the campaign tracker for Ebberon: Sunlight and Shadow!</div>
                 <div class="header-text">Sign up below to access information on locations, items, weapons, NPCs, antagonists, and important plot threads.</div>
             </div>
             
             <div class="form-controls">
                 <p>Let's do this!</p>
                 <div class="inputs">
-                    <form action="" method="post">
+                    <form action="#" method="post">
                         <div>
                             <div>
                                 <label for="name">FIRST NAME <span style="color: orange">*</span></label>
-                                <input type="text" id="name" name="user-firstname" required>
+                                <input type="text" id="name" name="user-firstname" minlength="2" maxlength="14" required>
                             </div>
                             <div>
                                 <label for="surname">LAST NAME <span style="color: orange">*</span></label>
-                                <input type="text" id="surname" name="user-surname" required>
+                                <input type="text" id="surname" name="user-surname" minlength="2" maxlength="14" required>
                             </div>
                         </div>
                         <div>
@@ -49,26 +49,28 @@
                                 <input type="email" id="email" name="user-email" required>
                             </div>
                             <div>
-                                <label for="phone">PHONE NUMBER</label>
-                                <input type="text" id="surname" name="user-surname">
+                                <label for="dob">DATE OF BIRTH <span style="color: orange">*</span></label>
+                                <input type="date" id="dob" name="user-dob" min="1900-01-01" max="2010-01-01" required>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <label for="password">PASSWORD <span style="color: orange">*</span></label>
-                                <input type="password" id="password" name="user-password">
+                                <input type="password" id="password" name="user-password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$" 
+                                    title="Password requires a minimum of eight characters, at least one upper case English letter, one lower case English letter, one number, and one special character" required>
                             </div>
                             <div>
                                 <label for="confirm">CONFIRM PASSWORD <span style="color: orange">*</span></label>
-                                <input type="password" id="confirm" name="user-confirm">
+                                <input type="password" id="confirm" name="user-confirm" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$" 
+                                title="Password requires a minimum of eight characters, at least one upper case English letter, one lower case English letter, one number, and one special character" required>
                             </div>
                         </div>
+                        <button type="submit" class="orange-text">Create Account</button>
                     </form>
 
                 </div>
             </div>
             <div class="form-footer">
-                <button class="orange-text">Create Account</button>
                 <div>Already have an account? <a class="orange-link" href="login.html">Log in</a></div>
             </div>
         </div>
